@@ -20,16 +20,19 @@ jobs:
         with:
           allow-licenses: 0BSD, BSD-1-Clause, BSD-2-Clause, BSD-3-Clause, LGPL-2.0-or-later, LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, WTFPL, Apache-2.0
 
-      - name: 'Print output'
+      - name: 'Disallow unlicensed/unknown license'
         shell: bash
         env:
-          VULNERABLE_CHANGES: "VULNERABLE CHANGES: ${{ steps.review.outputs.vulnerable-changes }}"
           INVALID_LICENSE_CHANGES: "INVALID LICENSE CHANGES ${{ steps.review.outputs.invalid-license-changes }}"
-          DENIED_CHANGES: "DENIED CHANGES ${{ steps.review.outputs.denied-changes }}"
         run: |
-          echo "$VULNERABLE_CHANGES"
-          echo "$INVALID_LICENSE_CHANGES"
-          echo "$DENIED_CHANGES"
+          echo "Invalid License Changes: '$INVALID_LICENSE_CHANGES'"
+
+          if echo "$INVALID_LICENSE_CHANGES" | grep -qE 'unlicensed|NOASSERTION'; then
+            echo "Found unlicensed or NOASSERTION license changes!"
+            exit 1
+          else
+            echo "No unlicensed or NOASSERTION license changes found."
+          fi
 # Rationale:
 ### BSD ###
 ## https://interoperable-europe.ec.europa.eu/licence/bsd-zero-clause-license
