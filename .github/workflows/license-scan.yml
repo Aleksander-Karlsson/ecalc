@@ -24,7 +24,7 @@ jobs:
         shell: bash
         env:
           VULNERABLE_CHANGES: "VULNERABLE CHANGES: ${{ steps.review.outputs.vulnerable-changes }}"
-          INVALID_LICENSE_CHANGES: "INVALID LICENSE CHANGES ${{ steps.review.outputs.invlid-license-changes }}"
+          INVALID_LICENSE_CHANGES: "INVALID LICENSE CHANGES ${{ steps.review.outputs.invalid-license-changes }}"
           DENIED_CHANGES: "DENIED CHANGES ${{ steps.review.outputs.denied-changes }}"
         run: |
           echo "$VULNERABLE_CHANGES"
