@@ -23,14 +23,11 @@ jobs:
       - name: 'Disallow unlicensed/unknown license'
         shell: bash
         env:
-          FULL: "${{ steps.review.outputs.invalid-license-changes }}"
-          UNLICENSED: "${{ steps.review.outputs.invalid-license-changes.unlicensed }}"
+          UNLICENSED: "${{ steps.review.outputs.invalid-license-changes }}"
         run: |
           echo "'$UNLICENSED'\n"
-          echo "'$FULL'\n"
 
-          # Checks if length is not zero.
-          if [ -n "$UNLICENSED" ]; then
+          if [ -n echo "$UNLICENSED" | jq ".unlicensed" ]; then
             echo -e "Invalid license changes found:\n$UNLICENSED"
             exit 1
           else
