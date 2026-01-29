@@ -30,6 +30,7 @@ classifiers = [
     "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
 ]
 dependencies = [
+    "PyQt5==5.*",
     "pydantic<3",
     "PyYAML==6.*",
     "numpy<3",
