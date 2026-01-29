@@ -14,9 +14,7 @@ keywords = [
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "Topic :: Scientific/Engineering",
     "Intended Audience :: Science/Research",
-    "Natural Language :: English",
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Software Development :: Libraries",
@@ -27,7 +25,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Natural Language :: English",
-    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)"
 ]
 dependencies = [
     "pydantic<3",
