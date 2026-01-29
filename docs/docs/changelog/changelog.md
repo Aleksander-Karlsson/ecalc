@@ -1,5 +1,18 @@
 # Changelog
 
+## [13.0.2](https://github.com/Aleksander-Karlsson/ecalc/compare/v13.0.1...v13.0.2) (2026-01-29)
+
+
+### Miscellaneous Chores
+
+* typo ([c3acdd5](https://github.com/Aleksander-Karlsson/ecalc/commit/c3acdd5d0f5c42347f9cd9ada78adfb126aaeee6))
+* update changelog ([#1351](https://github.com/Aleksander-Karlsson/ecalc/issues/1351)) ([014970b](https://github.com/Aleksander-Karlsson/ecalc/commit/014970bc750aecfd0d11aabf073f236a86245b0f))
+
+
+### Continuous Integration
+
+* define licenses, improve workflow ([ade9d16](https://github.com/Aleksander-Karlsson/ecalc/commit/ade9d1664eb93ae30d3be0542e0839834f22ebcc))
+
 ## [13.0.1](https://github.com/equinor/ecalc/compare/v13.0.0...v13.0.1) (2026-01-28)
 
 
