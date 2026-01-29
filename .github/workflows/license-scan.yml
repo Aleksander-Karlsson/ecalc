@@ -26,12 +26,13 @@ jobs:
           UNLICENSED: "${{ steps.review.outputs.invalid-license-changes }}"
         run: |
           echo "'$UNLICENSED'\n"
+          EXPECTED={"unlicensed":[],"unresolved":[],"forbidden":[]}
 
-          if [ -n echo "$UNLICENSED" | jq ".unlicensed" ]; then
+          if [ "$UNLICENSED" = "$EXPECTED" ]; then
+            echo "No unlicensed changes found."
+          else
             echo -e "Invalid license changes found:\n$UNLICENSED"
             exit 1
-          else
-            echo "No unlicensed changes found."
           fi
 
 # Rationale:
