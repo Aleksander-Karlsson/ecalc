@@ -25,7 +25,7 @@ jobs:
         env:
           UNLICENSED: "${{ steps.review.outputs.invalid-license-changes.unlicensed }}"
         run: |
-          if [ "$(echo "$UNLICENSED" | jq 'length')" -gt 0 ]; then
+          if [ "$UNLICENSED" != "[]" ]; then
             echo -e "Invalid license changes found:\n$UNLICENSED"
             exit 1
           else
