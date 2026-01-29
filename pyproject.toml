@@ -42,7 +42,7 @@ dependencies = [
     "typer==0.*",
     "jneqsim>=3.0.42",
     "bandit==1.7.0",
-    "adfpy>=0.2.0",
+    "pycparser>=3.0",
 ]
 
 [project.urls]
