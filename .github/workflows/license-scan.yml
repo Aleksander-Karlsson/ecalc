@@ -25,7 +25,6 @@ jobs:
         env:
           UNLICENSED: "${{ steps.review.outputs.invalid-license-changes }}"
         run: |
-          echo "'$UNLICENSED'\n"
           EXPECTED={"unlicensed":[],"unresolved":[],"forbidden":[]}
 
           if [ "$UNLICENSED" = "$EXPECTED" ]; then
