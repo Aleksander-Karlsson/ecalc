@@ -27,8 +27,8 @@ jobs:
         run: |
           EXPECTED={"unlicensed":[],"unresolved":[],"forbidden":[]}
 
-          echo "'$EXPECTED'"
-          echo "'$UNLICENSED'"
+          echo $EXPECTED
+          echo $UNLICENSED
 
           if [ $UNLICENSED = $EXPECTED ]; then
             echo "No unlicensed changes found."
